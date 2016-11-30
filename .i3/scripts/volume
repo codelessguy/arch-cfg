@@ -1,0 +1,10 @@
+#!/bin/sh
+
+CMD=$(amixer get Master)
+MUTE=$(echo "$CMD" | grep -E -o '\[(on|off)\]' | head -1)
+
+if [[ $MUTE =~ "[off]" ]] ; then
+	echo "M"
+else
+	echo $(echo "$CMD" | grep -E -o '[0-9]{1,3}?%' | head -1)
+fi
