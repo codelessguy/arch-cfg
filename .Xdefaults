@@ -57,30 +57,78 @@ URxvt.pointerBlank:         true
 
 !!Source http://github.com/altercation/solarized
 
-*background:    #101010
-*foreground:    #66FF66
-*cursorColor:   #66ff66
-!black
-*color0:        #1c1c1c
-*color8:        #4d4d4d
-!red
-*color1:        #D81860
-*color9:        #F00060
-!green
-*color2:        #60FF60
-*color10:       #70FF70
-!yellow
-*color3:        #f9fd75
-*color11:       #f9fd80
-!blue
-*color4:        #4695c8
-*color12:       #5a9dc8
-!magenta
-*color5:        #a78edb
-*color13:       #b29fdb
-!cyan
-*color6:        #43afce
-*color14:       #69b8ce
-!white
-*color7:        #f3ebe2
-*color15: #eeeeee
+! *background:    #101010
+! *foreground:    #66FF66
+! *cursorColor:   #66ff66
+! !black
+! *color0:        #1c1c1c
+! *color8:        #4d4d4d
+! !red
+! *color1:        #D81860
+! *color9:        #F00060
+! !green
+! *color2:        #60FF60
+! *color10:       #70FF70
+! !yellow
+! *color3:        #f9fd75
+! *color11:       #f9fd80
+! !blue
+! *color4:        #4695c8
+! *color12:       #5a9dc8
+! !magenta
+! *color5:        #a78edb
+! *color13:       #b29fdb
+! !cyan
+! *color6:        #43afce
+! *color14:       #69b8ce
+! !white
+! *color7:        #f3ebe2
+! *color15: #eeeeee
+!
+! #define bg      #d7dbe5
+!
+! #define blk     #66706f
+! #define acc     #548a8d
+! #define dgry    #7c898c
+! #define lgry    #969ca3
+! #define wht     #cbd0dd
+
+
+! PaperColour Theme
+
+URxvt.foreground: #4D4D4C
+URxvt.background: #EEEEEE
+
+! black
+URxvt.color0: #EDEDED
+URxvt.color8: #969694
+
+! red
+URxvt.color1: #D7005F
+URxvt.color9: #D7005F
+
+! green
+URxvt.color2: #718C00
+URxvt.color10: #718C00
+
+! yellow / orange
+URxvt.color3: #D75F00
+URxvt.color11: #D75F00
+
+! blue
+
+URxvt.color4: #4271AE
+URxvt.color12: #4271AE
+
+! magenta
+URxvt.color5: #8959A8
+URxvt.color13: #8959A8
+
+! cyan
+URxvt.color6: #3E999F
+URxvt.color14: #3E999F
+
+! white
+URxvt.color7: #4D4D4C
+URxvt.color15: #F5F5F5
+

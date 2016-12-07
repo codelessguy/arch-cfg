@@ -1,14 +1,31 @@
 call plug#begin()
 Plug 'tpope/vim-sensible'
+
+" Files
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
+
+" Bottom bar
+Plug 'vim-airline/vim-airline'
+
+" JS
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'vim-airline/vim-airline'
+Plug 'Raimondi/delimitMate'
+Plug 'Valloric/YouCompleteMe'
+
+" Theme
 Plug 'vim-airline/vim-airline-themes'
-Plug 'morhetz/gruvbox'
 Plug 'easymotion/vim-easymotion'
+Plug 'scrooloose/nerdcommenter'
+Plug 'morhetz/gruvbox'
+Plug 'junegunn/seoul256.vim'
 call plug#end()
+
+"
+" RELOAD VIM !!!
+" :so $MYVIMRC
+"
 
 let mapleader = ','
 
@@ -69,12 +86,43 @@ endif
 " Search and Replace
 nmap <Leader>s :%s//g<Left><Left>
 
+" set termguicolors
+" syntax enable
 " Theme
-set bg=dark
-colorscheme gruvbox
+" set bg=light
+" colorscheme gruvbox
+let g:seoul256_background = 255
+colo seoul256
+set background=light
 
-noremap <C-Up> 5k
-noremap <C-Down> 5j
+noremap <C-k> 5k
+noremap <C-j> 5j
+
+" Move between panes with , + arrow keys
+nmap <silent> <Leader><Up> :wincmd k<CR>
+nmap <silent> <Leader><Down> :wincmd j<CR>
+nmap <silent> <Leader><Left> :wincmd h<CR>
+nmap <silent> <Leader><Right> :wincmd l<CR>
+" Or use C-W h,j,k,l
+
+" Copy buffer for all terminals
+set clipboard+=unnamedplus
+
+" " Copy to clipboard
+" vnoremap  <leader>y  "+y
+" nnoremap  <leader>Y  "+yg_
+" nnoremap  <leader>y  "+y
+" nnoremap  <leader>yy  "+yy
+"
+" " Paste from clipboard
+" nnoremap <leader>p "+p
+" nnoremap <leader>P "+P
+" vnoremap <leader>p "+p
+" vnoremap <leader>P "+P
+
+" begging of line in normal mode (azerty)
+nnoremap ù 0
+
 
 """""""""""""
 " NERDTree
@@ -94,6 +142,8 @@ let g:nerdtree_tabs_open_on_gui_startup=0
 """""""""""""
 " ctrlp
 """""""""""""
+let g:ctrlp_working_path_mode = 'ra'
+
 " Ignore files in .gitignore
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
@@ -111,3 +161,27 @@ let g:airline_left_alt_sep = '|'
 let g:airline_right_sep = ' '
 let g:airline_right_alt_sep = '|'
 let g:airline_theme= 'gruvbox'
+
+"""""""""""""""
+" NERDCommenter
+"""""""""""""""
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
