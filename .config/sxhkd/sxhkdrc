@@ -4,11 +4,11 @@
 
 # terminal emulator
 super + Return
-	urxvt
+	terminator
 
 # program launcher
 super + d
-	rofi -show drun # dmenu_run
+	rofi -show drun
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -86,6 +86,10 @@ super + {grave,Tab}
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# rotate tree
+super + r
+	bspc node @/ -R 90
 
 #
 # preselect

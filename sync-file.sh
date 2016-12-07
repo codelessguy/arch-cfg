@@ -36,6 +36,9 @@ cp -r ${BASE_DIR}/.config/polybar .
 mkdir -p nvim
 cp ${BASE_DIR}/.config/nvim/init.vim nvim/
 
+# compton
+cp -r ${BASE_DIR}/.config/compton.conf .
+
 cd ..
 
 exit 0
